@@ -13,8 +13,9 @@
     <text x="80" y="260" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Autonomous</text>
     <text x="80" y="330" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Architect</text>
     <text x="80" y="400" font-family="sans-serif" font-weight="600" font-size="32" fill="url(#cyanGrad)">Root Terminal &amp; Git Access</text>
-    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">UtterIDE doesn't just suggest code. It runs terminal commands,</text>
-    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">resolves dependencies, and creates Git commits autonomously.</text>
+    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">UtterIDE doesn't just suggest code.</text>
+    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">It runs terminal commands, resolves</text>
+    <text x="80" y="520" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">dependencies, and creates Git commits.</text>
     
     <!-- Visual Element: Terminal -->
     <rect x="680" y="150" width="540" height="420" rx="16" fill="#05232d" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.5"/>

@@ -13,9 +13,9 @@
     <text x="80" y="260" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Unmatched</text>
     <text x="80" y="330" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Value</text>
     <text x="80" y="400" font-family="sans-serif" font-weight="600" font-size="32" fill="url(#cyanGrad)">Pay As You Go For Power Users</text>
-    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">Why pay $20/month when you write code a few hours a week?</text>
-    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">Bring your own key and pay pennies. Optimized perfectly</text>
-    <text x="80" y="520" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">for the incredible value of DeepSeek Coder V2.</text>
+    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">Why pay $20/month when you write code</text>
+    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">a few hours a week? Bring your own key</text>
+    <text x="80" y="520" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">and pay pennies. Optimized for DeepSeek.</text>
     
     <!-- Visual Element -->
     <rect x="680" y="150" width="540" height="420" rx="16" fill="#05232d" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.5"/>

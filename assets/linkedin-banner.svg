@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396">
+    <rect width="1584" height="396" fill="#041A22"/>
+    <defs>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d2ff"/>
+            <stop offset="100%" stop-color="#3a7bd5"/>
+        </linearGradient>
+    </defs>
+    <!-- Grid -->
+    <path d="M0 100 L1584 100 M0 200 L1584 200 M0 300 L1584 300 M100 0 L100 396 M200 0 L200 396 M300 0 L300 396 M400 0 L400 396 M500 0 L500 396 M600 0 L600 396 M700 0 L700 396 M800 0 L800 396 M900 0 L900 396 M1000 0 L1000 396 M1100 0 L1100 396 M1200 0 L1200 396 M1300 0 L1300 396 M1400 0 L1400 396 M1500 0 L1500 396" stroke="#00d2ff" stroke-opacity="0.05" stroke-width="1"/>
+    
+    <text x="120" y="160" font-family="sans-serif" font-weight="800" font-size="72" fill="#ffffff">UtterIDE</text>
+    <text x="120" y="240" font-family="sans-serif" font-weight="800" font-size="48" fill="url(#cyanGrad)">Affordable, review-first AI coding.</text>
+    
+    <text x="120" y="300" font-family="sans-serif" font-weight="400" font-size="24" fill="#8caab4">Bring Your Own Key. Pay As You Go.</text>
+    <text x="120" y="335" font-family="sans-serif" font-weight="400" font-size="24" fill="#8caab4">Stop paying $240/year for subscriptions you barely use.</text>
+
+    <!-- Visual Element on the right -->
+    <rect x="1000" y="80" width="460" height="240" rx="16" fill="#05232d" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.5"/>
+    <rect x="1000" y="80" width="460" height="40" rx="16" fill="#021519"/>
+    <rect x="1000" y="100" width="460" height="20" fill="#021519"/>
+    
+    <circle cx="1030" cy="100" r="6" fill="#ff5f56"/>
+    <circle cx="1050" cy="100" r="6" fill="#ffbd2e"/>
+    <circle cx="1070" cy="100" r="6" fill="#27c93f"/>
+    <text x="1100" y="105" font-family="sans-serif" font-size="14" fill="#8caab4">deepseek_billing.json</text>
+    
+    <text x="1030" y="160" font-family="monospace" font-size="18" fill="#ffffff">Input Tokens : 1,000,000</text>
+    <text x="1030" y="200" font-family="monospace" font-size="18" fill="#ffffff">Output Tokens: 1,000,000</text>
+    
+    <text x="1030" y="260" font-family="monospace" font-size="24" fill="#27c93f">Total Cost: ~ $0.42 / week</text>
+</svg>

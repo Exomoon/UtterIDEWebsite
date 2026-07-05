@@ -13,8 +13,9 @@
     <text x="80" y="260" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Database</text>
     <text x="80" y="330" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Synapses</text>
     <text x="80" y="400" font-family="sans-serif" font-weight="600" font-size="32" fill="url(#cyanGrad)">Live SQL &amp; Schema Awareness</text>
-    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">UtterIDE connects securely to your local Postgres/MySQL.</text>
-    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">It reads tables, validates SQL queries, and generates migrations.</text>
+    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">UtterIDE connects securely to your DB.</text>
+    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">It reads tables, validates SQL queries,</text>
+    <text x="80" y="520" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">and generates Prisma migrations.</text>
     
     <!-- Visual Element -->
     <rect x="680" y="150" width="540" height="420" rx="16" fill="#05232d" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.5"/>
