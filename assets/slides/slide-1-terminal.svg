@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+    <rect width="1280" height="720" fill="#041A22"/>
+    <defs>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d2ff"/>
+            <stop offset="100%" stop-color="#3a7bd5"/>
+        </linearGradient>
+    </defs>
+    <!-- Grid pattern background -->
+    <path d="M0 100 L1280 100 M0 200 L1280 200 M0 300 L1280 300 M0 400 L1280 400 M0 500 L1280 500 M0 600 L1280 600 M100 0 L100 720 M200 0 L200 720 M300 0 L300 720 M400 0 L400 720 M500 0 L500 720 M600 0 L600 720 M700 0 L700 720 M800 0 L800 720 M900 0 L900 720 M1000 0 L1000 720 M1100 0 L1100 720 M1200 0 L1200 720" stroke="#00d2ff" stroke-opacity="0.05" stroke-width="1"/>
+    
+    <!-- Hero Text -->
+    <text x="80" y="260" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Autonomous</text>
+    <text x="80" y="330" font-family="sans-serif" font-weight="800" font-size="64" fill="#ffffff">Architect</text>
+    <text x="80" y="400" font-family="sans-serif" font-weight="600" font-size="32" fill="url(#cyanGrad)">Root Terminal &amp; Git Access</text>
+    <text x="80" y="460" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">UtterIDE doesn't just suggest code. It runs terminal commands,</text>
+    <text x="80" y="490" font-family="sans-serif" font-weight="400" font-size="20" fill="#8caab4">resolves dependencies, and creates Git commits autonomously.</text>
+    
+    <!-- Visual Element: Terminal -->
+    <rect x="680" y="150" width="540" height="420" rx="16" fill="#05232d" stroke="url(#cyanGrad)" stroke-width="2" stroke-opacity="0.5"/>
+    <rect x="680" y="150" width="540" height="40" rx="16" fill="#021519"/>
+    <!-- Overlap to make bottom square -->
+    <rect x="680" y="170" width="540" height="20" fill="#021519"/>
+    
+    <circle cx="710" cy="170" r="6" fill="#ff5f56"/>
+    <circle cx="730" cy="170" r="6" fill="#ffbd2e"/>
+    <circle cx="750" cy="170" r="6" fill="#27c93f"/>
+    <text x="710" y="240" font-family="monospace" font-size="18" fill="#27c93f">$ npm install express pg</text>
+    <text x="710" y="270" font-family="monospace" font-size="18" fill="#8caab4">added 62 packages in 2s</text>
+    <text x="710" y="320" font-family="monospace" font-size="18" fill="#00d2ff">$ git add .</text>
+    <text x="710" y="360" font-family="monospace" font-size="18" fill="#00d2ff">$ git commit -m "feat: Add DB"</text>
+    <text x="710" y="390" font-family="monospace" font-size="18" fill="#8caab4">[main 8a2f1b] feat: Add DB</text>
+    <text x="710" y="440" font-family="monospace" font-size="18" fill="#ffffff">🤖 Task Completed.</text>
+    <text x="710" y="470" font-family="monospace" font-size="18" fill="#00d2ff">_</text>
+</svg>

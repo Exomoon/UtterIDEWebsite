@@ -26,13 +26,13 @@
             <div class="logo-container">
                 <!-- Using a stylized U as placeholder if image is missing -->
                 <div class="logo-u">U</div>
-                <span class="logo-text">UtterIDE</span>
+                <span class="logo-text">UtterIDE <span style="font-size: 10px; background: rgba(0, 210, 255, 0.15); padding: 2px 6px; border-radius: 4px; color: #00d2ff; vertical-align: top; margin-left: 4px;">BETA</span></span>
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#security">Security</a>
                 <a href="#" id="open-legal-nav">Legal</a>
-                <a href="#download" class="btn-primary-small">Download Extension</a>
+                <a href="https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categories&sortBy=Relevance&query=UtterIDE" target="_blank" class="btn-primary-small">Get from Marketplace</a>
             </div>
         </div>
     </nav>
@@ -40,19 +40,44 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-bg-glow"></div>
-        <div class="hero-content">
-            <div class="badge">Version 3.0 is here</div>
-            <h1 class="hero-title">
-                The World's Most Affordable & <br>
-                <span class="gradient-text">Powerful Agent</span>
-            </h1>
-            <p class="hero-subtitle">
-                A premium, local-first AI coding architect for VSCode. <br>
-                Empowered with Dual Brain QA, Long-Term Memory, and Database Synapses.
-            </p>
-            <div class="hero-actions">
-                <a href="#download" class="btn-primary">Get for VSCode</a>
-                <a href="#features" class="btn-secondary">Explore Features</a>
+        <div class="hero-split">
+            <div class="hero-content">
+                <div class="badge">V3 Public Beta is Live</div>
+                <h1 class="hero-title">
+                    The World's Most Affordable & <br>
+                    <span class="gradient-text">Powerful Agent</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A premium, local-first AI coding architect for VSCode. <br>
+                    Empowered with Dual Brain QA, Long-Term Memory, and Database Synapses.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categories&sortBy=Relevance&query=UtterIDE" target="_blank" class="btn-primary">Get from Marketplace</a>
+                    <a href="#features" class="btn-secondary">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="code-title">agent.ts - UtterIDE</div>
+                    </div>
+                    <div class="code-body">
+<pre><code><span class="syntax-comment">// Initialize the local-first coding architect</span>
+<span class="syntax-keyword">const</span> <span class="syntax-const">agent</span> = <span class="syntax-keyword">new</span> <span class="syntax-cyan">UtterIDE</span>({
+  <span class="syntax-cyan">role</span>: <span class="syntax-string">"Architect"</span>,
+  <span class="syntax-cyan">dualBrains</span>: <span class="syntax-const">true</span>,
+  <span class="syntax-cyan">database</span>: <span class="syntax-string">"postgresql://localhost:5432/main"</span>
+});
+
+<span class="syntax-keyword">await</span> <span class="syntax-const">agent</span>.<span class="syntax-method">analyzeArchitecture</span>();
+<span class="syntax-comment">// ⚡ Auto-patch generated: 14 files modified safely.</span></code></pre>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -123,17 +148,22 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <div class="logo-u-small">U</div>
-                <span class="logo-text">UtterIDE</span>
+                <a href="https://utteride.se" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    <div class="logo-u-small">U</div>
+                    <span class="logo-text" style="color: var(--text-main);">UtterIDE</span>
+                </a>
             </div>
             <div class="footer-links">
-                <a href="#" id="open-legal-footer">Legal & Disclaimers</a>
-                <a href="#">GitHub</a>
-                <a href="#">Contact</a>
+                <a href="#" id="open-legal-footer">Legal & Beta Disclaimer</a>
+                <a href="https://github.com/Exomoon/UtterIDEWebsite" target="_blank" id="github-link">GitHub</a>
+                <a href="https://www.linkedin.com/company/utteride/" target="_blank">LinkedIn</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 UtterIDE. All rights reserved.
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; margin-top: 20px;">
+            <div>&copy; 2026 UtterIDE. All rights reserved.</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+                Architected by <a href="https://www.linkedin.com/in/fme-dev/" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">Ronnie Utter</a>
+            </div>
         </div>
     </footer>
 
