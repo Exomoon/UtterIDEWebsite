@@ -44,13 +44,13 @@
             <div class="hero-content">
                 <div class="badge">V3 Public Beta is Live</div>
                 <h1 class="hero-title">
-                    Affordable, review-first <br>
-                    <span class="gradient-text">AI coding for VS Code</span>
+                    A review-first code agent <br>
+                    <span class="gradient-text">for VS Code</span>
                 </h1>
                 <p class="hero-subtitle">
-                    DeepSeek-first. BYOK. Patch-based changes. <br>
-                    Project memory, Dual AI review, and local run logs. <br>
-                    Your AI proposes. You review the diff. You approve.
+                    UtterIDE reads your project, proposes code patches, explains SQL, generates diagrams and tracks cost &mdash; without applying changes before you approve.<br><br>
+                    DeepSeek-first. BYOK. Claude, Gemini and OpenAI ready when you choose.<br>
+                    <strong>AI proposes. You review the diff. UtterIDE applies.</strong>
                 </p>
                 <div class="hero-actions">
                     <a href="https://marketplace.visualstudio.com/items?itemName=UtterIDE.utteride-ai" target="_blank" class="btn-primary">Get from Marketplace</a>
@@ -89,46 +89,46 @@
     <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="section-header">
-            <h2>Unmatched Capabilities</h2>
-            <p>Designed for architects, built for speed.</p>
+            <h2>A code agent that works inside your project</h2>
+            <p>UtterIDE connects project context, code patches, SQL analysis, diagrams and review-first approvals in one VS Code workflow.</p>
         </div>
         
         <div class="features-grid">
             <!-- Feature 1 -->
             <div class="feature-card">
-                <div class="feature-icon" style="color: #00d2ff;">🐙</div>
-                <h3>Git & Terminal Access</h3>
-                <p>Review-first access to terminal and Git workflows, with user approval for risky actions.</p>
+                <div class="feature-icon" style="color: #00d2ff;">📝</div>
+                <h3>Code Patches</h3>
+                <p>Reads files, understands context, proposes diffs and waits for approval before applying changes.</p>
             </div>
             <!-- Feature 2 -->
             <div class="feature-card">
                 <div class="feature-icon" style="color: #e040fb;">🗄️</div>
-                <h3>Database Synapses</h3>
-                <p>Connects to local PostgreSQL instances, reading schemas instantly to provide context-aware SQL generation.</p>
+                <h3>SQL & Databases</h3>
+                <p>Explains schemas, analyzes slow queries, suggests indexes and masks sensitive data before cloud calls.</p>
             </div>
             <!-- Feature 3 -->
             <div class="feature-card">
-                <div class="feature-icon" style="color: #4caf50;">🧠</div>
-                <h3>Local Long-Term Memory</h3>
-                <p>100% portable memory. Persists across sessions using a JSON-based neural map inside your workspace.</p>
+                <div class="feature-icon" style="color: #4caf50;">🐍</div>
+                <h3>Python & Scripts</h3>
+                <p>Creates helper scripts, refactors code and helps run checks without hiding what changed.</p>
             </div>
             <!-- Feature 4 -->
             <div class="feature-card">
-                <div class="feature-icon" style="color: #ff9800;">🛡️</div>
-                <h3>Dual Brains (QA Agent)</h3>
-                <p>A secondary AI automatically reviews all generated patches for logic flaws before they reach your editor.</p>
+                <div class="feature-icon" style="color: #ff9800;">📊</div>
+                <h3>Mermaid Diagrams</h3>
+                <p>Generates architecture diagrams, database diagrams and flowcharts directly in the chat.</p>
             </div>
             <!-- Feature 5 -->
             <div class="feature-card">
                 <div class="feature-icon" style="color: #f44336;">⚖️</div>
-                <h3>Free Thinkers Labs</h3>
-                <p>A dedicated sandbox where two AI personas debate complex architectural decisions to uncover bottlenecks.</p>
+                <h3>Dual AI Review</h3>
+                <p>One agent builds. Another reviews. You approve the final patch.</p>
             </div>
             <!-- Feature 6 -->
             <div class="feature-card">
-                <div class="feature-icon" style="color: #00bcd4;">🕸️</div>
-                <h3>Project Neural Map</h3>
-                <p>Watch your codebase come alive in a 3D physics node graph visualizing files, rules, and database schemas.</p>
+                <div class="feature-icon" style="color: #00bcd4;">🧾</div>
+                <h3>Run Ledger</h3>
+                <p>See what was read, changed, approved, rejected, touched and exactly what it cost.</p>
             </div>
         </div>
     </section>
@@ -138,7 +138,7 @@
         <div class="security-container glass-panel">
             <div class="security-content">
                 <h2>Local-First Architecture</h2>
-                <p>UtterIDE has no central backend. Your data is stored locally, but selected prompts and code context may be sent directly to the AI provider you configure via your own API key. Keys are encrypted in your OS Secret Storage, and long-term memory is kept exclusively in your Git repository.</p>
+                <p>No central UtterIDE backend. Your project memory, run logs and settings are stored locally. When you use a cloud AI provider, selected context is sent directly from your machine to that provider. Sensitive data masking is designed to reduce risk, but users should still review what is sent to cloud providers.</p>
                 <div class="security-badges">
                     <span class="sec-badge">🔒 Opt-In Telemetry</span>
                     <span class="sec-badge">🛡️ Zero SaaS Storage</span>
@@ -162,6 +162,9 @@
                 <a href="https://github.com/Exomoon/UtterIDEWebsite" target="_blank" id="github-link">GitHub</a>
                 <a href="https://www.linkedin.com/company/utteride/" target="_blank">LinkedIn</a>
             </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2rem; max-width: 800px; line-height: 1.5;">
+            UtterIDE is beta software. AI outputs can be wrong. Agent actions can modify files, run commands or interact with databases depending on configuration. Review all changes before approval. Cloud AI providers may receive selected context when configured. See Disclaimer, Privacy Policy and Terms.
         </div>
         <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; margin-top: 20px;">
             <div>&copy; 2026 UtterIDE. All rights reserved.</div>
