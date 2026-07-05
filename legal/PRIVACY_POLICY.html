@@ -1,0 +1,392 @@
+<h1>UtterIDE Privacy Policy</h1>
+<p><em>Last updated: 2026-07-05</em></p>
+<p>This Privacy Policy explains how UtterIDE handles data.</p>
+<p>UtterIDE is currently a beta product. This policy may be updated as the product evolves, especially if paid plans, telemetry, cloud services, or additional integrations are introduced.</p>
+<p>This document is not legal advice. Organizations using UtterIDE with personal data, confidential data, customer data, production systems, or regulated environments should review their own legal, security, and compliance requirements.</p>
+<hr>
+<h2>1. Summary</h2>
+<p>UtterIDE is designed as a local-first Visual Studio Code extension.</p>
+<p>UtterIDE does not require an UtterIDE account.</p>
+<p>UtterIDE does not operate a central backend server for storing your code, prompts, project files, database credentials, chat history, memory files, run logs, or API keys.</p>
+<p>Most UtterIDE data is stored locally on your machine or inside your project workspace.</p>
+<p>However, when you choose to use a cloud LLM provider such as DeepSeek, Anthropic, OpenAI, Google, OpenRouter, Ollama Cloud, or another supported provider, selected prompts, code context, file contents, database query results, logs, or other workspace information may be sent directly from your machine to that provider.</p>
+<p>UtterIDE uses a Bring Your Own Key model. You are responsible for the API keys and providers you choose to use.</p>
+<hr>
+<h2>2. What UtterIDE Does Not Collect Centrally</h2>
+<p>UtterIDE currently does not collect, transmit, or store the following on an UtterIDE-owned backend server:</p>
+<ul>
+<li>your name</li>
+<li>your email address</li>
+<li>your account information</li>
+<li>your source code</li>
+<li>your prompts</li>
+<li>your chat history</li>
+<li>your project files</li>
+<li>your database credentials</li>
+<li>your API keys</li>
+<li>your local memory files</li>
+<li>your architecture graph files</li>
+<li>your run logs</li>
+<li>your terminal output</li>
+<li>your Git history</li>
+<li>your database query results</li>
+</ul>
+<p>UtterIDE currently has no central user account system and no central cloud storage for user projects.</p>
+<hr>
+<h2>3. Local Storage</h2>
+<p>UtterIDE may store data locally on your machine or inside your workspace.</p>
+<p>Examples may include:</p>
+<ul>
+<li><code>.utteride/memory.json</code></li>
+<li><code>.utteride/architecture.json</code></li>
+<li><code>.utteride/pii_rules.json</code></li>
+<li><code>.utteride/project-context.md</code></li>
+<li><code>.utteride/instructions.md</code></li>
+<li><code>.utteride/runs/</code></li>
+<li>local run ledger files</li>
+<li>local architecture maps</li>
+<li>local project summaries</li>
+<li>local chat or session state</li>
+<li>local settings</li>
+<li>local logs</li>
+</ul>
+<p>These files may contain sensitive project information.</p>
+<p>You are responsible for protecting these files.</p>
+<p>You should decide whether to:</p>
+<ul>
+<li>commit them to Git</li>
+<li>exclude them via <code>.gitignore</code></li>
+<li>encrypt them</li>
+<li>delete them</li>
+<li>share them with teammates</li>
+<li>include them in backups</li>
+<li>copy them between machines</li>
+</ul>
+<p>Recommended default:</p>
+<pre><code class="language-gitignore">.utteride/runs/
+.utteride/*.local.json
+.utteride/secrets*
+</code></pre>
+<p>Depending on your project, you may also want to exclude all <code>.utteride/</code> files from Git.</p>
+<hr>
+<h2>4. API Keys</h2>
+<p>UtterIDE uses a Bring Your Own Key model.</p>
+<p>You may connect your own API keys for providers such as:</p>
+<ul>
+<li>DeepSeek</li>
+<li>Anthropic</li>
+<li>OpenAI</li>
+<li>Google</li>
+<li>OpenRouter</li>
+<li>Ollama Cloud</li>
+<li>other supported providers</li>
+</ul>
+<p>UtterIDE is designed to store API keys using Visual Studio Code’s secure secret storage where supported.</p>
+<p>API keys should not be stored in plain text files.</p>
+<p>UtterIDE should not intentionally store API keys in:</p>
+<ul>
+<li><code>settings.json</code></li>
+<li>source code</li>
+<li>prompts</li>
+<li>memory files</li>
+<li>run logs</li>
+<li>terminal logs</li>
+<li>telemetry</li>
+<li>screenshots</li>
+<li>exported documentation</li>
+</ul>
+<p>You are responsible for:</p>
+<ul>
+<li>creating your own provider accounts</li>
+<li>protecting your API keys</li>
+<li>rotating keys if needed</li>
+<li>deleting keys when no longer needed</li>
+<li>monitoring provider usage</li>
+<li>paying provider charges</li>
+<li>complying with each provider’s terms</li>
+</ul>
+<hr>
+<h2>5. Third-Party LLM Providers</h2>
+<p>UtterIDE may send selected data directly from your machine to your chosen LLM provider.</p>
+<p>Examples of data that may be sent include:</p>
+<ul>
+<li>your prompt</li>
+<li>selected code</li>
+<li>active file content</li>
+<li>relevant project files</li>
+<li>search results</li>
+<li>project context</li>
+<li>database query results</li>
+<li>error messages</li>
+<li>terminal output</li>
+<li>Git diffs</li>
+<li>run summaries</li>
+<li>memory or project context snippets</li>
+</ul>
+<p>UtterIDE does not control how third-party providers process, store, secure, retain, or use data sent to them.</p>
+<p>Your use of each provider is governed by that provider’s own terms, privacy policy, data processing terms, retention policy, and security practices.</p>
+<p>UtterIDE is not affiliated with DeepSeek, Anthropic, OpenAI, Google, Microsoft, OpenRouter, Ollama, or other providers unless explicitly stated.</p>
+<p>Before using a provider, you should review that provider’s terms and privacy policy.</p>
+<hr>
+<h2>6. Cloud vs Local Runtime</h2>
+<p>UtterIDE may support both cloud and local runtimes.</p>
+<h3>Cloud runtime</h3>
+<p>When using a cloud provider, selected context is sent to that provider.</p>
+<p>Examples:</p>
+<ul>
+<li>DeepSeek API</li>
+<li>Anthropic Claude API</li>
+<li>OpenAI API</li>
+<li>Google Gemini API</li>
+<li>OpenRouter</li>
+<li>Ollama Cloud</li>
+</ul>
+<h3>Local runtime</h3>
+<p>When using a local runtime, model execution may happen on your machine.</p>
+<p>Examples:</p>
+<ul>
+<li>Ollama Local</li>
+<li>local model runtimes</li>
+<li>local OpenAI-compatible endpoints</li>
+</ul>
+<p>Local runtime can reduce cloud data transfer, but local runtime does not automatically mean that all risk is removed. Local logs, local files, plugins, extensions, malware, backups, Git repositories, or system-level tools may still expose data if misconfigured.</p>
+<p>UtterIDE should clearly display whether the active provider is local or cloud where possible.</p>
+<hr>
+<h2>7. Sensitive Data and PII Masking</h2>
+<p>UtterIDE may include local masking features designed to reduce the risk of sending sensitive information to cloud LLM providers.</p>
+<p>For example, database query results may be intercepted before being sent to an LLM provider and masked according to rules in:</p>
+<pre><code class="language-text">.utteride/pii_rules.json
+</code></pre>
+<p>Potentially sensitive fields may include:</p>
+<ul>
+<li>email addresses</li>
+<li>passwords</li>
+<li>API keys</li>
+<li>tokens</li>
+<li>personal identity numbers</li>
+<li>social security numbers</li>
+<li>customer IDs</li>
+<li>salaries</li>
+<li>financial data</li>
+<li>health data</li>
+<li>addresses</li>
+<li>phone numbers</li>
+<li>private notes</li>
+<li>production database rows</li>
+</ul>
+<p>Masking may replace values with placeholders such as:</p>
+<pre><code class="language-text">***MASKED***
+</code></pre>
+<h3>Important limitation</h3>
+<p>PII masking is a safety feature, not a guarantee.</p>
+<p>UtterIDE may fail to detect sensitive data.</p>
+<p>Rules may be incomplete.</p>
+<p>Column names may be misleading.</p>
+<p>Sensitive data may appear in unexpected fields, logs, comments, stack traces, filenames, database rows, JSON blobs, free text, or generated content.</p>
+<p>You are responsible for reviewing what data may be sent to third-party providers and for ensuring that your use complies with applicable law, contracts, policies, and confidentiality obligations.</p>
+<hr>
+<h2>8. Databases</h2>
+<p>UtterIDE may support connecting to databases such as PostgreSQL or PostGIS.</p>
+<p>Database credentials should be stored locally using secure storage where supported.</p>
+<p>UtterIDE may be able to:</p>
+<ul>
+<li>inspect schema</li>
+<li>run SQL queries</li>
+<li>run <code>EXPLAIN</code></li>
+<li>generate database diagrams</li>
+<li>optimize queries</li>
+<li>run migrations</li>
+<li>read rows</li>
+<li>modify rows</li>
+<li>create or drop database objects</li>
+</ul>
+<p>Database actions can expose or modify sensitive data.</p>
+<p>You are responsible for:</p>
+<ul>
+<li>choosing which database to connect</li>
+<li>avoiding production systems unless appropriate</li>
+<li>reviewing queries before execution</li>
+<li>protecting database credentials</li>
+<li>ensuring PII masking rules are correct</li>
+<li>complying with applicable data protection laws</li>
+<li>ensuring you have authorization to access and process the data</li>
+</ul>
+<p>Recommended practice:</p>
+<ul>
+<li>use local or staging databases during development</li>
+<li>avoid production databases unless necessary</li>
+<li>avoid sending production data to cloud LLM providers</li>
+<li>use backups</li>
+<li>use read-only credentials where possible</li>
+<li>review all generated SQL</li>
+<li>use PII masking rules</li>
+</ul>
+<hr>
+<h2>9. Terminal and System Access</h2>
+<p>UtterIDE may support executing terminal commands.</p>
+<p>Commands run with the permissions of the user account and VS Code session where UtterIDE is running.</p>
+<p>UtterIDE does not have more operating system permissions than the user/session grants it, but those permissions may still be powerful enough to modify or delete files, install packages, change Git repositories, or affect local systems.</p>
+<p>Terminal output may contain sensitive data.</p>
+<p>If terminal output is sent to a cloud LLM provider, it may be processed by that provider.</p>
+<p>You are responsible for reviewing terminal commands and outputs before allowing them to be used or transmitted.</p>
+<hr>
+<h2>10. Git and Source Control</h2>
+<p>UtterIDE may support Git actions such as:</p>
+<ul>
+<li><code>git status</code></li>
+<li><code>git diff</code></li>
+<li>commit message generation</li>
+<li>creating commits</li>
+<li>pushing to remotes</li>
+</ul>
+<p>Git actions can expose or publish code and sensitive information.</p>
+<p>You are responsible for reviewing:</p>
+<ul>
+<li>changed files</li>
+<li>staged files</li>
+<li>commit messages</li>
+<li>branch names</li>
+<li>remote repositories</li>
+<li>pushed content</li>
+</ul>
+<p>Before committing or pushing, ensure that secrets, database credentials, personal data, tokens, logs, and local <code>.utteride/</code> files are not accidentally included.</p>
+<hr>
+<h2>11. Run Ledger and Logs</h2>
+<p>UtterIDE may create local run logs or run ledger files.</p>
+<p>These may record:</p>
+<ul>
+<li>provider used</li>
+<li>model used</li>
+<li>runtime type</li>
+<li>estimated cost</li>
+<li>files read</li>
+<li>files changed</li>
+<li>approvals requested</li>
+<li>approvals accepted or rejected</li>
+<li>terminal usage</li>
+<li>Git usage</li>
+<li>database usage</li>
+<li>PII masking state</li>
+<li>final summaries</li>
+<li>errors</li>
+</ul>
+<p>Run ledger files are intended to help users understand what happened during an agent run.</p>
+<p>Run ledger files may contain sensitive information.</p>
+<p>You are responsible for protecting, deleting, excluding, or sharing these files appropriately.</p>
+<hr>
+<h2>12. Cost and Billing Data</h2>
+<p>UtterIDE may show estimated or exact usage costs for third-party LLM providers.</p>
+<p>Cost information may include:</p>
+<ul>
+<li>provider</li>
+<li>model</li>
+<li>input tokens</li>
+<li>output tokens</li>
+<li>estimated price</li>
+<li>session total</li>
+<li>run total</li>
+<li>remaining provider credits if supported by the provider</li>
+</ul>
+<p>UtterIDE does not control third-party provider billing.</p>
+<p>You are responsible for monitoring your own provider accounts, balances, invoices, usage limits, and API costs.</p>
+<p>UtterIDE cost estimates may be inaccurate.</p>
+<hr>
+<h2>13. Telemetry</h2>
+<p>The current intended model is no central UtterIDE backend and no required user account.</p>
+<p>If telemetry, analytics, crash reporting, usage metrics, licensing checks, cloud sync, or paid account features are introduced in the future, this Privacy Policy should be updated before those features are enabled.</p>
+<p>If telemetry is added, it should be:</p>
+<ul>
+<li>clearly disclosed</li>
+<li>optional where practical</li>
+<li>limited in scope</li>
+<li>not include prompts, source code, file contents, database rows, terminal output, API keys, or secrets unless explicitly disclosed and consented to</li>
+</ul>
+<hr>
+<h2>14. Future Paid Plans</h2>
+<p>UtterIDE may be free during beta.</p>
+<p>Future versions may introduce:</p>
+<ul>
+<li>monthly subscription fees</li>
+<li>commercial licensing</li>
+<li>premium features</li>
+<li>supporter tiers</li>
+<li>paid updates</li>
+<li>usage-based features</li>
+<li>paid support</li>
+</ul>
+<p>Third-party LLM costs are separate from any UtterIDE subscription unless explicitly stated.</p>
+<p>Users remain responsible for any charges from their chosen providers.</p>
+<hr>
+<h2>15. Children</h2>
+<p>UtterIDE is intended for developers and technical users.</p>
+<p>It is not intended for children.</p>
+<p>Do not use UtterIDE to process children’s personal data unless you are authorized to do so and have reviewed applicable legal requirements.</p>
+<hr>
+<h2>16. Security</h2>
+<p>UtterIDE is designed to reduce certain risks through local storage, secure secret storage, review-first workflows, PII masking, and local run logs.</p>
+<p>However, no software can guarantee complete security.</p>
+<p>Risks may include:</p>
+<ul>
+<li>accidental data exposure</li>
+<li>unsafe AI outputs</li>
+<li>prompt injection</li>
+<li>malicious project files</li>
+<li>unsafe terminal commands</li>
+<li>insecure third-party extensions</li>
+<li>leaked local files</li>
+<li>provider-side data retention</li>
+<li>misconfigured Git repositories</li>
+<li>database exposure</li>
+<li>incomplete masking rules</li>
+</ul>
+<p>You should use standard security practices, including:</p>
+<ul>
+<li>Git</li>
+<li>backups</li>
+<li>least-privilege credentials</li>
+<li>read-only database users</li>
+<li>sandboxed environments</li>
+<li>Docker containers</li>
+<li>test databases</li>
+<li><code>.gitignore</code></li>
+<li>secret scanning</li>
+<li>code review</li>
+<li>provider usage limits</li>
+</ul>
+<hr>
+<h2>17. User Responsibilities</h2>
+<p>By using UtterIDE, you are responsible for:</p>
+<ul>
+<li>reviewing AI-generated outputs</li>
+<li>approving or rejecting proposed actions</li>
+<li>protecting your API keys</li>
+<li>monitoring provider usage and billing</li>
+<li>protecting local <code>.utteride/</code> files</li>
+<li>complying with third-party provider terms</li>
+<li>complying with privacy and data protection laws</li>
+<li>ensuring you have permission to process any data involved</li>
+<li>using backups and version control</li>
+<li>avoiding unauthorized use of production systems</li>
+<li>validating code, SQL, commands, diagrams, and recommendations</li>
+</ul>
+<hr>
+<h2>18. Contact</h2>
+<p>If an official support email, website, company name, or contact method is later created for UtterIDE, it should be added here.</p>
+<p>Until then, this Privacy Policy is a beta draft and should be reviewed before public release.</p>
+<hr>
+<h2>19. Changes to This Policy</h2>
+<p>This policy may be updated over time.</p>
+<p>Changes may be required as UtterIDE evolves, especially if the product adds:</p>
+<ul>
+<li>accounts</li>
+<li>payments</li>
+<li>telemetry</li>
+<li>crash reporting</li>
+<li>cloud sync</li>
+<li>hosted services</li>
+<li>central licensing</li>
+<li>team features</li>
+<li>marketplace publishing</li>
+<li>enterprise features</li>
+</ul>
+<p>Users should review the latest version before using UtterIDE with sensitive, confidential, regulated, or production data.</p>

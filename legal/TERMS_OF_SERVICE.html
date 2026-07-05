@@ -1,0 +1,387 @@
+<h1>UtterIDE Terms of Use</h1>
+<p><em>Last updated: 2026-07-05</em></p>
+<p>These Terms of Use govern your use of UtterIDE.</p>
+<p>UtterIDE is currently a beta product. These Terms may be updated as the product evolves, especially if paid plans, licensing, telemetry, cloud services, marketplace publishing, or team features are introduced.</p>
+<p>This document is a beta draft and is not legal advice. It should be reviewed by a qualified legal professional before public commercial release.</p>
+<hr>
+<h2>1. Acceptance of Terms</h2>
+<p>By installing, accessing, or using UtterIDE, you agree to these Terms of Use.</p>
+<p>If you do not agree to these Terms, do not install or use UtterIDE.</p>
+<p>If you use UtterIDE on behalf of a company, organization, client, employer, or other legal entity, you represent that you have authority to do so and that the entity agrees to these Terms.</p>
+<hr>
+<h2>2. What UtterIDE Is</h2>
+<p>UtterIDE is a Visual Studio Code extension that provides AI-assisted coding and development workflows.</p>
+<p>Depending on enabled features and configuration, UtterIDE may help users:</p>
+<ul>
+<li>understand code</li>
+<li>generate code</li>
+<li>propose patches</li>
+<li>edit files</li>
+<li>create files</li>
+<li>review diffs</li>
+<li>run terminal commands</li>
+<li>interact with Git</li>
+<li>connect to databases</li>
+<li>generate SQL</li>
+<li>inspect database schemas</li>
+<li>generate diagrams</li>
+<li>run query analysis</li>
+<li>use project memory</li>
+<li>use multiple AI providers</li>
+<li>run multi-agent workflows</li>
+</ul>
+<p>UtterIDE is designed as a review-first development assistant, but users remain responsible for all actions performed through the software.</p>
+<hr>
+<h2>3. Beta Status</h2>
+<p>UtterIDE is currently provided as beta software.</p>
+<p>Beta software may contain:</p>
+<ul>
+<li>bugs</li>
+<li>incomplete features</li>
+<li>unstable behavior</li>
+<li>incorrect AI outputs</li>
+<li>security issues</li>
+<li>performance issues</li>
+<li>unexpected side effects</li>
+<li>breaking changes</li>
+<li>missing documentation</li>
+</ul>
+<p>UtterIDE is provided <strong>“as is”</strong> and <strong>“as available”</strong>.</p>
+<p>You should not rely on UtterIDE as your sole method for writing, reviewing, testing, deploying, migrating, securing, or operating software systems.</p>
+<hr>
+<h2>4. No UtterIDE Account Required</h2>
+<p>UtterIDE currently does not require users to create an UtterIDE account.</p>
+<p>UtterIDE currently does not operate a central backend server for storing user projects, prompts, source code, database credentials, API keys, local memory files, architecture graphs, or run logs.</p>
+<p>UtterIDE uses a Bring Your Own Key model for third-party LLM providers.</p>
+<p>If future versions introduce accounts, licensing, payments, telemetry, cloud sync, or hosted services, these Terms and the Privacy Policy should be updated.</p>
+<hr>
+<h2>5. Bring Your Own Key</h2>
+<p>Users may connect their own API keys for third-party AI providers such as:</p>
+<ul>
+<li>DeepSeek</li>
+<li>Anthropic</li>
+<li>OpenAI</li>
+<li>Google</li>
+<li>OpenRouter</li>
+<li>Ollama Cloud</li>
+<li>other supported providers</li>
+</ul>
+<p>You are responsible for:</p>
+<ul>
+<li>obtaining valid API keys</li>
+<li>protecting API keys</li>
+<li>managing API usage</li>
+<li>monitoring API costs</li>
+<li>complying with provider terms</li>
+<li>reviewing provider privacy policies</li>
+<li>paying provider charges</li>
+<li>handling provider account limits, balances, bans, rate limits, and errors</li>
+</ul>
+<p>UtterIDE is not responsible for third-party API charges, rate limits, outages, model behavior, provider data handling, provider policy changes, or provider account issues.</p>
+<hr>
+<h2>6. Third-Party Providers</h2>
+<p>UtterIDE is not affiliated with DeepSeek, Anthropic, OpenAI, Google, Microsoft, OpenRouter, Ollama, or any other third-party provider unless explicitly stated.</p>
+<p>When you use a third-party provider, your use is governed by that provider’s own terms, privacy policy, data processing terms, usage policies, billing terms, and security practices.</p>
+<p>UtterIDE does not control how third-party providers process, store, secure, retain, train on, or otherwise handle data sent to them.</p>
+<p>You are responsible for deciding which provider to use and what data may be sent to that provider.</p>
+<hr>
+<h2>7. Local Storage and Workspace Files</h2>
+<p>UtterIDE may create or use local files inside your workspace, including:</p>
+<ul>
+<li><code>.utteride/memory.json</code></li>
+<li><code>.utteride/architecture.json</code></li>
+<li><code>.utteride/pii_rules.json</code></li>
+<li><code>.utteride/project-context.md</code></li>
+<li><code>.utteride/instructions.md</code></li>
+<li><code>.utteride/runs/</code></li>
+<li>logs</li>
+<li>run ledger files</li>
+<li>project metadata</li>
+</ul>
+<p>These files may contain sensitive information.</p>
+<p>You are responsible for:</p>
+<ul>
+<li>protecting these files</li>
+<li>excluding them from Git if needed</li>
+<li>encrypting them if needed</li>
+<li>deleting them if needed</li>
+<li>deciding whether to share them</li>
+<li>avoiding accidental publication of local project metadata</li>
+</ul>
+<p>Recommended practice: review your <code>.gitignore</code> before committing or pushing any project using UtterIDE.</p>
+<hr>
+<h2>8. User Responsibility for Outputs</h2>
+<p>AI-generated outputs may be wrong.</p>
+<p>UtterIDE may generate:</p>
+<ul>
+<li>incorrect code</li>
+<li>insecure code</li>
+<li>broken code</li>
+<li>incomplete patches</li>
+<li>destructive commands</li>
+<li>invalid SQL</li>
+<li>unsafe migrations</li>
+<li>misleading explanations</li>
+<li>incorrect architecture diagrams</li>
+<li>wrong database advice</li>
+<li>incorrect security recommendations</li>
+<li>hallucinated information</li>
+</ul>
+<p>You are responsible for reviewing, testing, validating, securing, and approving all outputs.</p>
+<p>You are responsible for all code, files, commands, database operations, Git operations, deployments, migrations, and decisions made with or through UtterIDE.</p>
+<hr>
+<h2>9. Review and Approval</h2>
+<p>UtterIDE may include approval flows for actions such as:</p>
+<ul>
+<li>applying patches</li>
+<li>writing files</li>
+<li>running terminal commands</li>
+<li>committing code</li>
+<li>pushing code</li>
+<li>running database queries</li>
+<li>running migrations</li>
+<li>sending data to cloud providers</li>
+<li>changing project memory</li>
+</ul>
+<p>Approval means you authorize the action and accept the associated risk.</p>
+<p>You should carefully review all proposed actions before approving them.</p>
+<p>Rejected actions should not be executed, but you remain responsible for verifying the state of your own project and system.</p>
+<hr>
+<h2>10. Terminal Access and Local Commands</h2>
+<p>UtterIDE may support terminal command execution.</p>
+<p>Commands run with the permissions available to the local VS Code session and operating system user account.</p>
+<p>Terminal commands can be dangerous.</p>
+<p>They may:</p>
+<ul>
+<li>delete files</li>
+<li>modify files</li>
+<li>install packages</li>
+<li>change permissions</li>
+<li>alter repositories</li>
+<li>expose secrets</li>
+<li>connect to networks</li>
+<li>run scripts</li>
+<li>modify databases</li>
+<li>affect your system</li>
+</ul>
+<p>You are responsible for reviewing commands before approval and for understanding their effects.</p>
+<p>You should use sandboxed environments, Docker containers, virtual machines, backups, and Git where appropriate.</p>
+<hr>
+<h2>11. Git and DevOps Actions</h2>
+<p>UtterIDE may support Git and DevOps-related actions such as:</p>
+<ul>
+<li>checking status</li>
+<li>reading diffs</li>
+<li>generating commit messages</li>
+<li>staging changes</li>
+<li>creating commits</li>
+<li>pushing to remotes</li>
+</ul>
+<p>Git actions can expose code, secrets, credentials, logs, personal data, or confidential business information.</p>
+<p>You are responsible for reviewing all changes before committing or pushing.</p>
+<p>You should not push sensitive information, secrets, credentials, local <code>.utteride/</code> files, logs, or personal data unless you are authorized and understand the risks.</p>
+<hr>
+<h2>12. Database Use</h2>
+<p>UtterIDE may support database connections and SQL execution.</p>
+<p>Database actions may include:</p>
+<ul>
+<li>reading schemas</li>
+<li>generating diagrams</li>
+<li>running queries</li>
+<li>reading data</li>
+<li>modifying data</li>
+<li>creating extensions</li>
+<li>creating tables</li>
+<li>altering tables</li>
+<li>dropping tables</li>
+<li>running migrations</li>
+<li>analyzing query plans</li>
+</ul>
+<p>Database actions can be high risk.</p>
+<p>They may cause:</p>
+<ul>
+<li>data loss</li>
+<li>corruption</li>
+<li>downtime</li>
+<li>privacy incidents</li>
+<li>security incidents</li>
+<li>production outages</li>
+<li>compliance violations</li>
+</ul>
+<p>You are responsible for:</p>
+<ul>
+<li>choosing database environments</li>
+<li>reviewing SQL</li>
+<li>using least-privilege credentials</li>
+<li>avoiding production unless necessary</li>
+<li>using backups</li>
+<li>using staging/test databases</li>
+<li>complying with data protection laws</li>
+<li>ensuring you are authorized to access and process the data</li>
+</ul>
+<p>Production database actions are strongly discouraged unless you fully understand and accept the risk.</p>
+<hr>
+<h2>13. Sensitive Data and PII</h2>
+<p>UtterIDE may include masking features intended to reduce the risk of sending sensitive data to cloud LLM providers.</p>
+<p>Masking is not guaranteed.</p>
+<p>UtterIDE may fail to detect sensitive data.</p>
+<p>You are responsible for ensuring that confidential information, personal data, trade secrets, secrets, credentials, tokens, customer data, production data, regulated data, or other sensitive data is not improperly processed or transmitted.</p>
+<p>You should not use UtterIDE with sensitive, confidential, regulated, or production data unless you are authorized to do so and understand the risks.</p>
+<hr>
+<h2>14. Compliance</h2>
+<p>UtterIDE does not guarantee compliance with:</p>
+<ul>
+<li>GDPR</li>
+<li>EU AI Act</li>
+<li>data protection laws</li>
+<li>cybersecurity laws</li>
+<li>employment laws</li>
+<li>intellectual property laws</li>
+<li>export controls</li>
+<li>sector-specific regulations</li>
+<li>contractual confidentiality obligations</li>
+<li>company security policies</li>
+<li>customer agreements</li>
+</ul>
+<p>You are responsible for determining whether your use of UtterIDE complies with applicable laws, rules, contracts, and policies.</p>
+<p>UtterIDE does not provide legal, compliance, security, financial, or professional advice.</p>
+<hr>
+<h2>15. Acceptable Use</h2>
+<p>You agree not to use UtterIDE to:</p>
+<ul>
+<li>violate laws or regulations</li>
+<li>access systems without authorization</li>
+<li>exfiltrate data</li>
+<li>steal credentials</li>
+<li>generate or deploy malware</li>
+<li>bypass security controls</li>
+<li>attack systems</li>
+<li>process data you are not authorized to process</li>
+<li>infringe intellectual property rights</li>
+<li>violate third-party provider terms</li>
+<li>intentionally cause data loss or system damage</li>
+<li>misrepresent UtterIDE as affiliated with third-party providers</li>
+</ul>
+<p>You are responsible for how you use the software and any provider APIs connected to it.</p>
+<hr>
+<h2>16. Intellectual Property</h2>
+<p>UtterIDE does not claim ownership of your source code or project files.</p>
+<p>You retain responsibility for ensuring that any code generated, modified, copied, or inserted through UtterIDE does not violate third-party intellectual property rights, licenses, contracts, or policies.</p>
+<p>AI-generated code may be similar to existing code or may include patterns subject to licensing concerns. You are responsible for reviewing generated output before use.</p>
+<p>UtterIDE’s own source code, name, logo, documentation, interface, and branding may be protected by copyright, trademark, license terms, or other rights depending on how the project is released.</p>
+<hr>
+<h2>17. Future Pricing and Paid Plans</h2>
+<p>UtterIDE may be offered for free during beta.</p>
+<p>Future versions may introduce:</p>
+<ul>
+<li>monthly subscription fees</li>
+<li>premium features</li>
+<li>commercial licensing</li>
+<li>paid support</li>
+<li>supporter tiers</li>
+<li>usage-based features</li>
+<li>license checks</li>
+<li>team plans</li>
+<li>enterprise plans</li>
+</ul>
+<p>Any future pricing will be communicated separately.</p>
+<p>Third-party LLM usage is separate from any UtterIDE subscription unless explicitly stated.</p>
+<p>You remain responsible for all charges from your chosen AI providers.</p>
+<p>Continued free access is not guaranteed.</p>
+<hr>
+<h2>18. Updates and Changes</h2>
+<p>UtterIDE may be updated, changed, limited, suspended, discontinued, or modified at any time.</p>
+<p>Features may be added, removed, renamed, restricted, or changed.</p>
+<p>Beta features may break or disappear.</p>
+<p>These Terms may be updated over time. Continued use after updates means you accept the updated Terms.</p>
+<hr>
+<h2>19. No Warranty</h2>
+<p>To the maximum extent permitted by applicable law, UtterIDE is provided without warranties of any kind.</p>
+<p>This includes, but is not limited to, implied warranties of:</p>
+<ul>
+<li>merchantability</li>
+<li>fitness for a particular purpose</li>
+<li>non-infringement</li>
+<li>accuracy</li>
+<li>availability</li>
+<li>security</li>
+<li>reliability</li>
+<li>correctness</li>
+<li>uninterrupted operation</li>
+<li>error-free operation</li>
+</ul>
+<p>UtterIDE does not warrant that the software will meet your requirements, produce correct results, prevent data loss, prevent security issues, or be safe for production use.</p>
+<hr>
+<h2>20. Limitation of Liability</h2>
+<p>To the maximum extent permitted by applicable law, the developers, maintainers, contributors, distributors, and publishers of UtterIDE are not liable for any direct, indirect, incidental, consequential, special, punitive, or exemplary damages arising from or related to the use of UtterIDE.</p>
+<p>This includes, but is not limited to:</p>
+<ul>
+<li>data loss</li>
+<li>code loss</li>
+<li>database loss</li>
+<li>business interruption</li>
+<li>downtime</li>
+<li>lost profits</li>
+<li>lost revenue</li>
+<li>broken builds</li>
+<li>failed deployments</li>
+<li>corrupted repositories</li>
+<li>API costs</li>
+<li>provider charges</li>
+<li>security incidents</li>
+<li>privacy incidents</li>
+<li>compliance violations</li>
+<li>production outages</li>
+<li>accidental disclosure of information</li>
+<li>actions approved by the user</li>
+<li>third-party provider behavior</li>
+<li>AI-generated errors</li>
+</ul>
+<p>Some jurisdictions do not allow certain exclusions or limitations, so some limitations may not apply to you.</p>
+<hr>
+<h2>21. Indemnification</h2>
+<p>To the extent permitted by law, you agree to defend, indemnify, and hold harmless the developers, maintainers, contributors, distributors, and publishers of UtterIDE from claims, damages, losses, liabilities, costs, and expenses arising from:</p>
+<ul>
+<li>your use of UtterIDE</li>
+<li>your approved actions</li>
+<li>your code, data, or systems</li>
+<li>your use of third-party providers</li>
+<li>your violation of these Terms</li>
+<li>your violation of law</li>
+<li>your violation of third-party rights</li>
+<li>your processing of personal or confidential data</li>
+<li>your database, Git, terminal, or deployment actions</li>
+</ul>
+<hr>
+<h2>22. Termination</h2>
+<p>You may stop using UtterIDE at any time.</p>
+<p>Access to future versions, updates, paid features, beta features, or support may be changed or discontinued.</p>
+<p>If future paid services are introduced, access may depend on payment, license status, or plan terms.</p>
+<hr>
+<h2>23. Governing Law</h2>
+<p>This beta draft does not specify governing law or venue.</p>
+<p>Before public commercial release, the developer should choose appropriate governing law, jurisdiction, dispute resolution, company details, and contact information.</p>
+<hr>
+<h2>24. Contact</h2>
+<p>If an official company name, website, support email, legal contact, or business address is later created for UtterIDE, it should be added here.</p>
+<p>Until then, this Terms document is a beta draft and should be reviewed before public release.</p>
+<hr>
+<h2>25. Entire Agreement</h2>
+<p>These Terms, together with the Privacy Policy and any other applicable notices, form the agreement between you and UtterIDE regarding use of the software.</p>
+<p>If any part of these Terms is found invalid or unenforceable, the remaining parts remain in effect.</p>
+<hr>
+<h2>26. Final User Acknowledgement</h2>
+<p>By using UtterIDE, you acknowledge that:</p>
+<ul>
+<li>AI outputs may be wrong</li>
+<li>autonomous tools are risky</li>
+<li>local files may be modified</li>
+<li>terminal commands may affect your system</li>
+<li>database actions may affect live data</li>
+<li>Git actions may publish code</li>
+<li>cloud providers may receive selected context</li>
+<li>masking is not guaranteed</li>
+<li>provider charges are your responsibility</li>
+<li>review, backups, Git, sandboxing, and testing are strongly recommended</li>
+<li>you remain responsible for all actions performed through UtterIDE</li>
+</ul>
