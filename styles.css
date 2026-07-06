@@ -1,18 +1,18 @@
-/* CSS Variables for UtterIDE Professional Theme v2 */
+/* CSS Variables for UtterIDE Professional Theme v2 (Antigravity Navy Blue) */
 :root {
-    --bg-main: #040814;
-    --bg-section: #07101f;
-    --panel: #0b1628;
-    --panel-soft: #0f1e33;
-    --border: #15324a;
+    --bg-main: #041A22;
+    --bg-section: #05232d;
+    --panel: #072e3d;
+    --panel-soft: #0a3b4d;
+    --border: #0d5069;
 
-    --text-main: #e7eef9;
-    --text-muted: #a6b3c7;
-    --text-soft: #6f819d;
+    --text-main: #f0f6f8;
+    --text-muted: #8caab4;
+    --text-soft: #5c7985;
 
-    --accent: #1fc8f7;
-    --accent-strong: #1e81ff;
-    --accent-soft: rgba(31, 200, 247, 0.14);
+    --accent: #00d2ff;
+    --accent-strong: #0096cc;
+    --accent-soft: rgba(0, 210, 255, 0.15);
 
     --success: #43d17a;
     --warning: #ffcb66;
