@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UtterIDE - Affordable, review-first AI coding for VS Code</title>
-    <meta name="description" content="UtterIDE: A premium, local-first AI coding agent for VSCode featuring Dual Brains, Neural Visualizer, and Database Synapses.">
+    <meta name="description" content="UtterIDE: A review-first code agent for VSCode featuring Dual Brains, cost-tracking, and Database Synapses.">
     
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,182 +24,527 @@
     <nav class="navbar">
         <div class="nav-content">
             <div class="logo-container">
-                <!-- Using a stylized U as placeholder if image is missing -->
                 <div class="logo-u">U</div>
-                <span class="logo-text">UtterIDE <span style="font-size: 10px; background: rgba(0, 210, 255, 0.15); padding: 2px 6px; border-radius: 4px; color: #00d2ff; vertical-align: top; margin-left: 4px;">BETA</span></span>
+                <span class="logo-text">UtterIDE <span style="font-size: 10px; background: rgba(31, 200, 247, 0.15); padding: 2px 6px; border-radius: 4px; color: var(--accent); vertical-align: top; margin-left: 4px;">BETA</span></span>
             </div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#security">Security</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
                 <a href="#" id="open-legal-nav">Legal</a>
                 <a href="https://marketplace.visualstudio.com/items?itemName=UtterIDE.utteride-ai" target="_blank" class="btn-primary-small">Get from Marketplace</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- 1. Hero Section -->
     <header class="hero">
-        <div class="hero-bg-glow"></div>
-        <div class="hero-split">
-            <div class="hero-content">
-                <div class="badge">V3 Public Beta is Live</div>
-                <h1 class="hero-title">
-                    A review-first code agent <br>
-                    <span class="gradient-text">for VS Code</span>
-                </h1>
-                <p class="hero-subtitle">
-                    UtterIDE reads your project, proposes code patches, explains SQL, generates diagrams and tracks cost &mdash; without applying changes before you approve.<br><br>
-                    DeepSeek-first. BYOK. Claude, Gemini and OpenAI ready when you choose.<br>
-                    <strong>AI proposes. You review the diff. UtterIDE applies.</strong>
-                </p>
-                <div class="hero-actions">
-                    <a href="https://marketplace.visualstudio.com/items?itemName=UtterIDE.utteride-ai" target="_blank" class="btn-primary">Get from Marketplace</a>
-                    <a href="#features" class="btn-secondary">Explore Features</a>
-                </div>
-                <div class="install-command" style="margin-top: 1.5rem; font-family: monospace; font-size: 0.85rem; color: #a0a0a0; background: rgba(0,0,0,0.3); padding: 8px 16px; border-radius: 6px; display: inline-block; border: 1px solid rgba(255,255,255,0.05);">
-                    <span style="color: #00d2ff; margin-right: 8px;">&gt;</span> ext install UtterIDE.utteride-ai
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot-red"></span>
-                            <span class="dot-yellow"></span>
-                            <span class="dot-green"></span>
-                        </div>
-                        <div class="code-title">agent.ts - UtterIDE</div>
-                    </div>
-                    <div class="code-body">
-<pre><code><span class="syntax-comment">// Initialize the local-first coding architect</span>
-<span class="syntax-keyword">const</span> <span class="syntax-const">agent</span> = <span class="syntax-keyword">new</span> <span class="syntax-cyan">UtterIDE</span>({
-  <span class="syntax-cyan">role</span>: <span class="syntax-string">"Architect"</span>,
-  <span class="syntax-cyan">dualBrains</span>: <span class="syntax-const">true</span>,
-  <span class="syntax-cyan">database</span>: <span class="syntax-string">"postgresql://localhost:5432/main"</span>
-});
-
-<span class="syntax-keyword">await</span> <span class="syntax-const">agent</span>.<span class="syntax-method">analyzeArchitecture</span>();
-<span class="comment">// Patch proposal generated: 14 files ready for review.</span></code></pre>
-                    </div>
-                </div>
-            </div>
+        <div class="badge">UtterIDE Beta</div>
+        <h1 class="hero-title">
+            A review-first code agent <br>
+            <span class="gradient-text">for VS Code</span>
+        </h1>
+        <p class="hero-subtitle">
+            UtterIDE reads your project, proposes code patches, explains SQL, generates diagrams and tracks cost &mdash; without applying changes before you approve.
+            <br><br>
+            Use DeepSeek for low-cost coding, or switch to Claude, Gemini or OpenAI when you choose.
+            <br><br>
+            <strong style="color: var(--text-main);">AI proposes. You review the diff. UtterIDE applies.</strong>
+        </p>
+        <div class="hero-actions">
+            <a href="https://marketplace.visualstudio.com/items?itemName=UtterIDE.utteride-ai" target="_blank" class="btn-primary">Get Beta</a>
+            <a href="#demo" class="btn-secondary">Explore Features</a>
         </div>
+        <p class="hero-pricing-line">Free during beta &middot; BYOK &middot; Pay-as-you-go AI usage</p>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
+    <!-- 2. Why UtterIDE? -->
+    <section class="section-wrapper bg-alt" id="why">
         <div class="section-header">
-            <h2>A code agent that works inside your project</h2>
-            <p>UtterIDE connects project context, code patches, SQL analysis, diagrams and review-first approvals in one VS Code workflow.</p>
+            <h2 class="section-title">Why UtterIDE?</h2>
+            <p class="section-subtitle">Most AI coding tools hide the real tradeoff: you either pay a fixed premium subscription, or you bring your own API key and pay for actual usage.</p>
         </div>
         
-        <div class="features-grid">
-            <!-- Feature 1 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #00d2ff;">📝</div>
-                <h3>Code Patches</h3>
-                <p>Reads files, understands context, proposes diffs and waits for approval before applying changes.</p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted);">
+            UtterIDE is built for developers who want a real code agent inside VS Code, but still want control over provider, cost, privacy and approval.
+        </p>
+        
+        <div class="simple-grid">
+            <div class="card">
+                <h3>Cost control</h3>
+                <p>Use your own provider key and see the estimated cost of each run.</p>
             </div>
-            <!-- Feature 2 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #e040fb;">🗄️</div>
-                <h3>SQL & Databases</h3>
-                <p>Explains schemas, analyzes slow queries, suggests indexes and masks sensitive data before cloud calls.</p>
+            <div class="card">
+                <h3>Review-first</h3>
+                <p>UtterIDE proposes patches and waits for your approval before applying changes.</p>
             </div>
-            <!-- Feature 3 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #4caf50;">🐍</div>
-                <h3>Python & Scripts</h3>
-                <p>Creates helper scripts, refactors code and helps run checks without hiding what changed.</p>
+            <div class="card">
+                <h3>Project-aware</h3>
+                <p>It reads relevant files, database schemas and local project memory to understand your workspace.</p>
             </div>
-            <!-- Feature 4 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #ff9800;">📊</div>
-                <h3>Mermaid Diagrams</h3>
-                <p>Generates architecture diagrams, database diagrams and flowcharts directly in the chat.</p>
-            </div>
-            <!-- Feature 5 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #f44336;">⚖️</div>
-                <h3>Dual AI Review</h3>
-                <p>One agent builds. Another reviews. You approve the final patch.</p>
-            </div>
-            <!-- Feature 6 -->
-            <div class="feature-card">
-                <div class="feature-icon" style="color: #00bcd4;">🧾</div>
-                <h3>Run Ledger</h3>
-                <p>See what was read, changed, approved, rejected, touched and exactly what it cost.</p>
+            <div class="card">
+                <h3>Provider choice</h3>
+                <p>DeepSeek by default. Claude, Gemini and OpenAI when you choose.</p>
             </div>
         </div>
     </section>
 
-    <!-- Security Section -->
-    <section id="security" class="security-section">
-        <div class="security-container glass-panel">
-            <div class="security-content">
-                <h2>Local-First Architecture</h2>
-                <p>No central UtterIDE backend. Your project memory, run logs and settings are stored locally. When you use a cloud AI provider, selected context is sent directly from your machine to that provider. Sensitive data masking is designed to reduce risk, but users should still review what is sent to cloud providers.</p>
-                <div class="security-badges">
-                    <span class="sec-badge">🔒 Opt-In Telemetry</span>
-                    <span class="sec-badge">🛡️ Zero SaaS Storage</span>
-                    <span class="sec-badge">🔑 OS Encrypted Keys</span>
+    <!-- 3. What is agentic coding? -->
+    <section class="section-wrapper" id="agentic-coding">
+        <div class="two-column">
+            <div>
+                <h2 class="section-title">What is agentic coding?</h2>
+                <p style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 24px;">
+                    A chatbot answers questions.<br>
+                    <span style="color: var(--accent);">A code agent works inside your project.</span>
+                </p>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">
+                    UtterIDE can read relevant files, understand project context, propose patches, show a VS Code diff, wait for approval, apply the change and summarize what happened.
+                </p>
+                <p style="font-weight: 600; color: var(--text-soft); font-size: 0.9rem; text-transform: uppercase;">
+                    Not just chat. Actual project work &mdash; with review before action.
+                </p>
+            </div>
+            <div class="glass-panel" style="padding: 32px; background: #02040a;">
+                <ul style="list-style: none; color: var(--text-muted); line-height: 2;">
+                    <li style="color: var(--text-main); font-weight: 600;">Open project</li>
+                    <li>&darr; Ask for change</li>
+                    <li>&darr; Agent reads context</li>
+                    <li>&darr; Patch proposed</li>
+                    <li>&darr; Diff shown</li>
+                    <li style="color: var(--warning); font-weight: 600;">&darr; Approve / reject</li>
+                    <li>&darr; Summary + cost</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How it works -->
+    <section class="section-wrapper bg-alt" id="how-it-works">
+        <div class="section-header">
+            <h2 class="section-title">How it works</h2>
+            <p class="section-subtitle">Turn your VS Code workspace into a review-first AI development environment.</p>
+        </div>
+        
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-text">Install UtterIDE in VS Code</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-text">Open your project folder</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-text">Add your API key</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-text">Ask for a code change</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-text">Review the diff</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">6</div>
+                <div class="step-text">Approve or reject</div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">7</div>
+                <div class="step-text">Track cost, performance and run history</div>
+            </div>
+        </div>
+        
+        <div style="max-width: 600px; margin: 40px auto 0; padding: 24px; border: 1px dashed var(--border); border-radius: 8px; text-align: center;">
+            <p style="color: var(--text-soft); font-size: 0.95rem;">
+                <strong>Optional:</strong> Connect PostgreSQL/PostGIS to let UtterIDE inspect schemas, explain slow SQL, generate Mermaid diagrams and help with database-aware development.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. Live Demo Card -->
+    <section class="section-wrapper" id="demo">
+        <div class="section-header">
+            <h2 class="section-title">Example: Database-aware code agent run</h2>
+            <p class="section-subtitle">UtterIDE can inspect project files and database schemas, suggest scripts or SQL improvements, then show proposed changes as a reviewable diff.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: var(--panel-soft); padding: 24px; border-radius: 12px; margin-bottom: 24px; border: 1px solid var(--border);">
+            <strong style="color: var(--text-main);">User:</strong><br>
+            <span style="color: var(--text-muted); font-style: italic;">"Analyze the database schema and create a small Python health-check script for slow order queries."</span>
+        </div>
+
+        <div class="demo-window" style="max-width: 800px; margin: 0 auto;">
+            <div class="demo-header">
+                <div class="demo-dots">
+                    <span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>
+                </div>
+                <div class="demo-title">scripts/check_order_query.py</div>
+            </div>
+            <div class="demo-body">
+<pre><code><span class="token-keyword">import</span> os
+<span class="token-keyword">import</span> psycopg
+<span class="token-keyword">from</span> time <span class="token-keyword">import</span> perf_counter
+
+DATABASE_URL = os.environ[<span class="token-string">"DATABASE_URL"</span>]
+
+QUERY = <span class="token-string">"""
+SELECT *
+FROM orders
+WHERE customer_id = %s
+ORDER BY created_at DESC
+LIMIT 20;
+"""</span>
+
+<span class="token-keyword">def</span> main(customer_id: str):
+    <span class="token-keyword">with</span> psycopg.connect(DATABASE_URL) <span class="token-keyword">as</span> conn:
+        start = perf_counter()
+        <span class="token-keyword">with</span> conn.cursor() <span class="token-keyword">as</span> cur:
+            cur.execute(<span class="token-string">"EXPLAIN (ANALYZE, FORMAT JSON) "</span> + QUERY, (customer_id,))
+            plan = cur.fetchone()[0]
+        elapsed_ms = (perf_counter() - start) * 1000
+
+    print(<span class="token-string">f"Query analysis completed in {elapsed_ms:.1f} ms"</span>)
+    print(<span class="token-string">"UtterIDE suggestion: consider an index on orders(customer_id, created_at DESC)"</span>)
+
+<span class="token-keyword">if</span> __name__ == <span class="token-string">"__main__"</span>:
+    main(<span class="token-string">"demo-customer"</span>)
+
+<span class="token-comment"># Result:
+# <span class="token-success">✓ Schema inspected</span>
+# <span class="token-success">✓ PII masking enabled</span>
+# <span class="token-success">✓ Python script proposed</span>
+# <span class="token-success">✓ QA agent reviewed patch</span>
+# <span class="token-success">✓ VS Code diff ready for approval</span>
+# Estimated cost: 0.04 kr</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Choose the right brain -->
+    <section class="section-wrapper bg-alt">
+        <div class="section-header">
+            <h2 class="section-title">Choose the right brain for the job</h2>
+            <p class="section-subtitle">UtterIDE is provider-flexible. Use DeepSeek for low-cost everyday coding. Switch to Claude, Gemini or OpenAI when the task benefits from another model.</p>
+        </div>
+
+        <div class="simple-grid">
+            <div class="card">
+                <h3>DeepSeek</h3>
+                <p><strong>Low-cost everyday coding</strong></p>
+                <p style="margin-top: 12px;">Best for:<br>- fast code patches<br>- agent runs<br>- refactors<br>- cost-sensitive workflows</p>
+            </div>
+            <div class="card">
+                <h3>Claude</h3>
+                <p><strong>Architecture and careful review</strong></p>
+                <p style="margin-top: 12px;">Best for:<br>- architecture decisions<br>- UI/UX reasoning<br>- careful critique<br>- complex tradeoffs</p>
+            </div>
+            <div class="card">
+                <h3>Gemini</h3>
+                <p><strong>Large context and long files</strong></p>
+                <p style="margin-top: 12px;">Best for:<br>- long files<br>- broad project reading<br>- large documentation<br>- repository-wide understanding</p>
+            </div>
+            <div class="card">
+                <h3>OpenAI</h3>
+                <p><strong>Versatile reasoning</strong></p>
+                <p style="margin-top: 12px;">Best for:<br>- general coding help<br>- explanations<br>- mixed tasks<br>- fallback workflows</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Pricing -->
+    <section class="section-wrapper" id="pricing">
+        <div class="section-header">
+            <h2 class="section-title">Free during beta. Pay only for the AI you use.</h2>
+            <p class="section-subtitle">UtterIDE currently costs 0 kr/month during public beta. Instead of forcing a fixed AI subscription, UtterIDE uses BYOK: you connect your own API key and pay your selected provider directly.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card highlight">
+                <div class="price-title">UtterIDE Beta</div>
+                <div class="price-amount">0 kr<span style="font-size: 1rem; font-weight: 500; color: var(--text-soft);">/month</span></div>
+                <ul class="price-features">
+                    <li>Review-first code agent</li>
+                    <li>Patch / diff / approve workflow</li>
+                    <li>DeepSeek, Claude, Gemini and OpenAI provider support</li>
+                    <li>Local project memory</li>
+                    <li>Run Ledger & Cost tracking</li>
+                    <li>PII masking</li>
+                    <li>Dual AI review</li>
+                </ul>
+                <div class="price-footer">Future paid plans may be introduced later.</div>
+            </div>
+            <div class="pricing-card">
+                <div class="price-title">AI Usage</div>
+                <div class="price-amount" style="font-size: 1.8rem;">Pay-as-you-go</div>
+                <p style="color: var(--text-main); margin-bottom: 16px;">You pay your chosen provider directly:</p>
+                <ul class="price-features">
+                    <li style="padding-left: 0;">&bull; DeepSeek for low-cost coding</li>
+                    <li style="padding-left: 0;">&bull; Claude for architecture and review</li>
+                    <li style="padding-left: 0;">&bull; Gemini for large context</li>
+                    <li style="padding-left: 0;">&bull; OpenAI for general reasoning</li>
+                </ul>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">UtterIDE shows estimated cost per run where possible.</p>
+                <div class="price-footer">Provider pricing and billing are controlled by the selected provider.</div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; color: var(--text-muted); max-width: 800px; margin-left: auto; margin-right: auto;">
+            Many AI tools use fixed monthly subscriptions. UtterIDE currently uses a different model: the plugin is free during beta, and AI usage is pay-as-you-go through your own provider key. For many developers, DeepSeek-first usage can be dramatically cheaper than a fixed premium subscription.
+        </p>
+    </section>
+
+    <!-- 8. Performance -->
+    <section class="section-wrapper bg-alt">
+        <div class="section-header">
+            <h2 class="section-title">See performance while you code</h2>
+            <p class="section-subtitle">UtterIDE shows live runtime signals so you understand what the agent is doing and what it costs. Track provider, model, cost, CPU, RAM, GPU and run status without leaving VS Code.</p>
+        </div>
+
+        <div class="dashboard-card" style="max-width: 700px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 16px;">
+                <div>
+                    <span style="color: var(--text-soft); font-size: 0.85rem; text-transform: uppercase;">Provider</span><br>
+                    <strong style="color: var(--accent);">DeepSeek</strong>
+                </div>
+                <div>
+                    <span style="color: var(--text-soft); font-size: 0.85rem; text-transform: uppercase;">Mode</span><br>
+                    <strong>Code Agent</strong>
+                </div>
+                <div>
+                    <span style="color: var(--text-soft); font-size: 0.85rem; text-transform: uppercase;">State</span><br>
+                    <strong style="color: var(--success);">QA Review</strong>
+                </div>
+                <div style="text-align: right;">
+                    <span style="color: var(--text-soft); font-size: 0.85rem; text-transform: uppercase;">Est. Cost</span><br>
+                    <strong style="color: var(--warning);">~0.04 kr</strong>
                 </div>
             </div>
+
+            <div class="metrics-row">
+                <div class="metric-circle cpu">
+                    <span class="metric-val">28%</span>
+                    <span class="metric-label">CPU</span>
+                </div>
+                <div class="metric-circle ram">
+                    <span class="metric-val">61%</span>
+                    <span class="metric-label">RAM</span>
+                </div>
+                <div class="metric-circle gpu">
+                    <span class="metric-val">14%</span>
+                    <span class="metric-label">GPU</span>
+                </div>
+            </div>
+
+            <div class="run-summary-box">
+                > Files read: 6<br>
+                > Patch count: 2<br>
+                <span style="color: var(--success);">> QA: Approved</span>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 9. What it can do -->
+    <section class="section-wrapper" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Built for real project work</h2>
+            <p class="section-subtitle">From code patches to SQL analysis, UtterIDE works where your project actually lives.</p>
+        </div>
+        
+        <div class="simple-grid">
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">📝</span> Code patches</h3>
+                <p>Reads files, understands context, proposes diffs and waits for approval before applying changes.</p>
+            </div>
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">🗄️</span> SQL & databases</h3>
+                <p>Explains schemas, analyzes slow queries, suggests indexes and masks sensitive data before cloud calls.</p>
+            </div>
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">🐍</span> Python & scripts</h3>
+                <p>Creates helper scripts, refactors code and helps run checks without hiding what changed.</p>
+            </div>
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">📊</span> Mermaid diagrams</h3>
+                <p>Generates architecture diagrams, database diagrams and flowcharts directly in the chat.</p>
+            </div>
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">⚖️</span> Dual AI review</h3>
+                <p>One agent builds. Another reviews. You approve the final patch.</p>
+            </div>
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">🧾</span> Run Ledger</h3>
+                <p>See what was read, changed, approved, rejected, touched and what it cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Dual AI -->
+    <section class="section-wrapper bg-alt">
+        <div class="section-header">
+            <h2 class="section-title">Dual AI review before you approve</h2>
+            <p class="section-subtitle">UtterIDE can run a second AI reviewer before you see the final patch. One agent proposes the change. Another agent reviews it for bugs, edge cases and architecture issues. You still approve the final diff.</p>
+        </div>
+
+        <div class="dual-ai-diagram">
+            <div class="ai-node">
+                <h4>Builder Agent</h4>
+                <ul>
+                    <li>proposes patch</li>
+                    <li>writes implementation</li>
+                    <li>prepares diff</li>
+                </ul>
+            </div>
+            <div class="ai-flow">
+                &rarr; Review Loop &larr;
+            </div>
+            <div class="ai-node" style="border-color: var(--warning);">
+                <h4>Reviewer Agent</h4>
+                <ul>
+                    <li>checks logic</li>
+                    <li>finds edge cases</li>
+                    <li>approves or sends back</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 24px;">
+            <div style="display: inline-block; background: rgba(67, 209, 122, 0.1); color: var(--success); padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(67, 209, 122, 0.3); font-weight: 600;">
+                QA Approved. Diff ready for user approval.
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Trust / Privacy -->
+    <section class="section-wrapper" id="security">
+        <div class="section-header">
+            <h2 class="section-title">Built for control, not blind automation</h2>
+            <p class="section-subtitle">UtterIDE is review-first. It proposes code changes as patches, shows a diff and waits for your approval before applying changes. The Run Ledger shows what was read, changed, approved, rejected, touched and what it cost.</p>
+        </div>
+
+        <div class="glass-panel" style="padding: 40px; text-align: center; max-width: 900px; margin: 0 auto;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 16px;">No central UtterIDE backend</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                UtterIDE stores project memory, run logs and settings locally in your workspace. When you use a cloud AI provider, selected context is sent directly from your machine to the provider you configure. Sensitive data masking is designed to reduce risk before cloud calls, but users should still review what is sent.
+            </p>
+            
+            <div class="trust-bullets">
+                <span class="trust-badge">No UtterIDE account required</span>
+                <span class="trust-badge">BYOK provider keys</span>
+                <span class="trust-badge">Local project memory</span>
+                <span class="trust-badge">Review-first patches</span>
+                <span class="trust-badge">Run Ledger</span>
+                <span class="trust-badge">PII masking</span>
+                <span class="trust-badge">Provider choice</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="section-wrapper bg-alt" id="faq">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">1. What is UtterIDE?</div>
+                <div class="faq-answer">UtterIDE is a review-first code agent for VS Code. It can read project context, propose patches, explain SQL, generate diagrams and track AI usage cost.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">2. Is UtterIDE free?</div>
+                <div class="faq-answer">UtterIDE is currently free during public beta. Future versions may introduce paid plans or premium features. AI provider usage is separate and paid directly to the provider you choose.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">3. Do I need an account?</div>
+                <div class="faq-answer">No UtterIDE account is required during beta. UtterIDE uses a Bring Your Own Key model for AI providers.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">4. Which AI providers are supported?</div>
+                <div class="faq-answer">UtterIDE supports DeepSeek, Claude, Gemini and OpenAI. DeepSeek is recommended for low-cost everyday coding. Claude, Gemini and OpenAI can be used when you prefer another model.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">5. Does UtterIDE send my code to a server?</div>
+                <div class="faq-answer">UtterIDE has no central backend server. Project data is stored locally, but selected context may be sent directly to the cloud AI provider you configure.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">6. Is sensitive data protected?</div>
+                <div class="faq-answer">UtterIDE includes sensitive data masking designed to reduce risk before cloud calls. Masking is not a guarantee. Users should still review what is sent to providers.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">7. Can UtterIDE change my files?</div>
+                <div class="faq-answer">Yes, but the core workflow is review-first. UtterIDE proposes patches, shows diffs and waits for approval before applying changes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">8. Can UtterIDE run terminal commands or database queries?</div>
+                <div class="faq-answer">Depending on configuration, UtterIDE can help with terminal and database workflows. These actions can be risky and should be reviewed carefully before approval.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">9. What is Dual AI Review?</div>
+                <div class="faq-answer">Dual AI Review lets one model propose a change while another model reviews it for bugs, edge cases and architecture issues before the user approves the final diff.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">10. How is UtterIDE different from a chatbot?</div>
+                <div class="faq-answer">A chatbot answers questions. UtterIDE works inside your project: it can read context, propose patches, generate diagrams, analyze SQL and track what happened in a run.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="https://utteride.se" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                    <div class="logo-u-small">U</div>
+                    <div class="logo-u">U</div>
                     <span class="logo-text" style="color: var(--text-main);">UtterIDE</span>
                 </a>
             </div>
             <div class="footer-links">
-                <a href="#" id="open-legal-footer">Legal & Beta Disclaimer</a>
+                <a href="#" id="open-legal-footer">Disclaimer</a>
+                <a href="legal/PRIVACY_POLICY.html" target="_blank">Privacy Policy</a>
+                <a href="legal/TERMS_OF_SERVICE.html" target="_blank">Terms</a>
                 <a href="https://github.com/Exomoon/UtterIDEWebsite" target="_blank" id="github-link">GitHub</a>
                 <a href="https://www.linkedin.com/company/utteride/" target="_blank">LinkedIn</a>
             </div>
         </div>
-        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2rem; max-width: 800px; line-height: 1.5;">
-            UtterIDE is beta software. AI outputs can be wrong. Agent actions can modify files, run commands or interact with databases depending on configuration. Review all changes before approval. Cloud AI providers may receive selected context when configured. See Disclaimer, Privacy Policy and Terms.
+        <div class="legal-text">
+            UtterIDE is beta software. AI outputs can be wrong. Agent actions can modify files, run commands or interact with databases depending on configuration. Review all changes before approval. Cloud AI providers may receive selected context when configured. UtterIDE is currently free during beta; future paid plans may be introduced. Third-party AI usage is billed by your chosen provider. See Disclaimer, Privacy Policy and Terms.
         </div>
-        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; margin-top: 20px;">
+        <div class="footer-bottom">
             <div>&copy; 2026 UtterIDE. All rights reserved.</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">
-                Architected by <a href="https://www.linkedin.com/in/fme-dev/" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">Ronnie Utter</a>
+            <div>
+                Architected by <a href="https://www.linkedin.com/in/fme-dev/" target="_blank" style="color: var(--accent); text-decoration: none;">Ronnie Utter</a>
             </div>
         </div>
     </footer>
 
     <!-- Legal Modal (Hidden by default) -->
     <div id="legal-modal" class="modal-overlay">
-        <div class="modal-content glass-panel">
+        <div class="modal-content glass-panel" style="background: var(--bg-section);">
             <button id="close-modal" class="close-btn">&times;</button>
             <div class="modal-header">
-                <h2>Legal & Beta Disclaimer</h2>
+                <h2 style="color: var(--text-main);">Legal & Beta Disclaimer</h2>
             </div>
             <div class="modal-body">
-                <h3>1. Beta Software & Provided \"As Is\"</h3>
-                <p>UtterIDE is currently in an active <strong>BETA</strong> phase. The software is provided \"AS IS\", without warranty of any kind. You use this software entirely at your own risk.</p>
+                <h3>1. Beta Software & Provided "As Is"</h3>
+                <p>UtterIDE is currently in an active <strong>BETA</strong> phase. The software is provided "AS IS", without warranty of any kind. You use this software entirely at your own risk.</p>
                 
                 <h3>2. Third-Party API Usage</h3>
-                <p>UtterIDE interfaces with third-party LLM providers (e.g., DeepSeek, Anthropic, Google, OpenAI). By using UtterIDE, you acknowledge that your prompts and code snippets are sent directly to the API providers you configure.</p>
+                <p>UtterIDE interfaces with third-party LLM providers. By using UtterIDE, you acknowledge that your prompts and code snippets are sent directly to the API providers you configure.</p>
                 
                 <h3>3. Agentic Root & File System Access</h3>
                 <p><strong>WARNING:</strong> UtterIDE operates as an autonomous agent with the ability to execute terminal commands, modify files, and interact with your local environment. It has the same privileges as the user running VSCode.</p>
                 
                 <h3>Full Policies</h3>
-                <div class="policy-links">
-                    <a href="legal/TERMS_OF_SERVICE.html" target="_blank">Terms of Service</a>
-                    <a href="legal/PRIVACY_POLICY.html" target="_blank">Privacy Policy</a>
-                    <a href="legal/UtterIDE Beta Disclaimer.pdf" target="_blank">Download Beta Disclaimer (PDF)</a>
+                <div class="policy-links" style="margin-bottom: 20px;">
+                    <a href="legal/TERMS_OF_SERVICE.html" target="_blank" style="color: var(--accent);">Terms of Service</a>
+                    <a href="legal/PRIVACY_POLICY.html" target="_blank" style="color: var(--accent);">Privacy Policy</a>
+                    <a href="legal/UtterIDE Beta Disclaimer.pdf" target="_blank" style="color: var(--accent);">Download Beta Disclaimer (PDF)</a>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button id="accept-legal" class="btn-primary">I Understand</button>
+            <div class="modal-footer" style="text-align: right; border-top: 1px solid var(--border); padding-top: 20px;">
+                <button id="accept-legal" class="btn-primary-small">I Understand</button>
             </div>
         </div>
     </div>
