@@ -47,6 +47,8 @@
         <p class="hero-subtitle">
             UtterIDE reads your project, proposes code patches, explains SQL, generates diagrams and tracks cost &mdash; without applying changes before you approve.
             <br><br>
+            <strong>Try the beta.</strong><br>
+            <strong>Bring your own API key.</strong><br>
             Use DeepSeek for low-cost coding, or switch to Claude, Gemini or OpenAI when you choose.
             <br><br>
             <strong style="color: var(--text-main);">AI proposes. You review the diff. UtterIDE applies.</strong>
@@ -55,7 +57,7 @@
             <a href="https://marketplace.visualstudio.com/items?itemName=UtterIDE.utteride-ai" target="_blank" class="btn-primary">Get Beta</a>
             <a href="#demo" class="btn-secondary">Explore Features</a>
         </div>
-        <p class="hero-pricing-line">Free during beta &middot; BYOK &middot; Pay-as-you-go AI usage</p>
+        <p class="hero-pricing-line">Review-first &middot; BYOK &middot; Provider choice &middot; No central backend</p>
     </header>
 
     <!-- 2. Why UtterIDE? -->
@@ -257,42 +259,38 @@ LIMIT 20;
     <!-- 7. Pricing -->
     <section class="section-wrapper" id="pricing">
         <div class="section-header">
-            <h2 class="section-title">Free during beta. Pay only for the AI you use.</h2>
-            <p class="section-subtitle">UtterIDE currently costs 0 kr/month during public beta. Instead of forcing a fixed AI subscription, UtterIDE uses BYOK: you connect your own API key and pay your selected provider directly.</p>
+            <h2 class="section-title">Beta access</h2>
+            <p class="section-subtitle">UtterIDE is currently free to use during beta. You bring your own API key and pay your chosen AI provider directly. DeepSeek is recommended for low-cost everyday coding workflows, while Claude, Gemini and OpenAI are available when you prefer another model. Future versions may introduce paid plans, premium features or commercial licensing.</p>
         </div>
 
         <div class="pricing-grid">
             <div class="pricing-card highlight">
                 <div class="price-title">UtterIDE Beta</div>
-                <div class="price-amount">0 kr<span style="font-size: 1rem; font-weight: 500; color: var(--text-soft);">/month</span></div>
+                <div class="price-amount" style="font-size: 1.8rem;">Currently free</div>
                 <ul class="price-features">
                     <li>Review-first code agent</li>
                     <li>Patch / diff / approve workflow</li>
-                    <li>DeepSeek, Claude, Gemini and OpenAI provider support</li>
                     <li>Local project memory</li>
-                    <li>Run Ledger & Cost tracking</li>
+                    <li>Run Ledger</li>
+                    <li>Cost tracking</li>
                     <li>PII masking</li>
                     <li>Dual AI review</li>
                 </ul>
-                <div class="price-footer">Future paid plans may be introduced later.</div>
+                <div class="price-footer">Beta access may change in the future.</div>
             </div>
             <div class="pricing-card">
-                <div class="price-title">AI Usage</div>
-                <div class="price-amount" style="font-size: 1.8rem;">Pay-as-you-go</div>
-                <p style="color: var(--text-main); margin-bottom: 16px;">You pay your chosen provider directly:</p>
+                <div class="price-title">AI usage</div>
+                <div class="price-amount" style="font-size: 1.8rem;">Bring your own API key</div>
+                <p style="color: var(--text-main); margin-bottom: 16px;">You pay your selected provider directly.</p>
                 <ul class="price-features">
                     <li style="padding-left: 0;">&bull; DeepSeek for low-cost coding</li>
                     <li style="padding-left: 0;">&bull; Claude for architecture and review</li>
                     <li style="padding-left: 0;">&bull; Gemini for large context</li>
                     <li style="padding-left: 0;">&bull; OpenAI for general reasoning</li>
                 </ul>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">UtterIDE shows estimated cost per run where possible.</p>
                 <div class="price-footer">Provider pricing and billing are controlled by the selected provider.</div>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 40px; color: var(--text-muted); max-width: 800px; margin-left: auto; margin-right: auto;">
-            Many AI tools use fixed monthly subscriptions. UtterIDE currently uses a different model: the plugin is free during beta, and AI usage is pay-as-you-go through your own provider key. For many developers, DeepSeek-first usage can be dramatically cheaper than a fixed premium subscription.
-        </p>
     </section>
 
     <!-- 8. Performance -->
@@ -454,7 +452,7 @@ LIMIT 20;
             </div>
             <div class="faq-item">
                 <div class="faq-question">2. Is UtterIDE free?</div>
-                <div class="faq-answer">UtterIDE is currently free during public beta. Future versions may introduce paid plans or premium features. AI provider usage is separate and paid directly to the provider you choose.</div>
+                <div class="faq-answer">UtterIDE is currently free during beta. AI provider usage is separate and paid directly to the provider you choose. Future versions may introduce paid plans, premium features or commercial licensing.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">3. Do I need an account?</div>
